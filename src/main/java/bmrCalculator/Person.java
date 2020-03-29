@@ -1,59 +1,64 @@
 package bmrCalculator;
 
-public class Person {
-    
-   
+class Person {
     private Gender fizGender;
     private Activity activity;
     private String name;
-    private double weight;
-    private double height;
-    private int age;
-    
+    private double weightInKg;
+    private int heightInCm;
+    private int ageInYears;
+
     public void setFizGender(Gender fizGender) {
         this.fizGender = fizGender;
     }
+
     public void setActivity(Activity strength) {
         this.activity = strength;
     }
+
     public void setName(String name) {
         this.name = name;
     }
-    public void setWeight(double weight) {
-        this.weight = weight;
+
+    public void setWeightInKg(double weightInKg) {
+        this.weightInKg = weightInKg;
     }
-    public void setHeight(double height) {
-        this.height = height;
+
+    public void setHeightInCm(int heightInCm) {
+        this.heightInCm = heightInCm;
     }
-    public void setAge(int age) {
-        this.age = age;
+
+    public void setAgeInYears(int ageInYears) {
+        this.ageInYears = ageInYears;
     }
+
     public Gender getFizGender() {
         return fizGender;
     }
+
     public Activity getActivity() {
         return activity;
     }
+
     public String getName() {
         return name;
     }
-    public double getWeight() {
-        return weight;
+
+    public double getWeightInKg() {
+        return weightInKg;
     }
-    public double getHeight() {
-        return height;
+
+    public int getHeightInCm() {
+        return heightInCm;
     }
-    public int getAge() {
-        return age;
+
+    public int getAgeInYears() {
+        return ageInYears;
     }
+
     @Override
     public String toString() {
-	String choose="";
-	if (fizGender == Gender.MALE)
-	    choose=", wprowadziłeś";
-	if (fizGender == Gender.FEMALE)
-	    choose=", wprowadziłaś";
-	return "Witaj " + name + choose +" dane:\nPłeć= " + fizGender + ", aktywność= " + activity + ", \nwaga= " + weight
-		+ "kg, wzrost= " + height + "cm, wiek= " + age + " lat.\n";
+       return "Płeć= " + fizGender + ", aktywność= " + activity + ", \nwaga= " + weightInKg
+                + "kg, wzrost= " + heightInCm + "cm, wiek= " + ageInYears + " lat.\n";
     }
 }

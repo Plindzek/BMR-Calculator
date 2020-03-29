@@ -1,57 +1,51 @@
 package bmrCalculator;
 
-public class ProfileBuilderImpl implements ProfileBuilder {
+class ProfileBuilderImpl implements ProfileBuilder {
 
     private Person person;
 
-    public ProfileBuilderImpl() {
-   	person = new Person();
-       }
-
-    @Override
-    public String toString() {
-	return "ProfileBuilderImpl [person=" + person + "]";
+    ProfileBuilderImpl() {
+        person = new Person();
     }
 
     @Override
     public Person build() {
-	return person;
+        return person;
     }
-
 
     @Override
     public ProfileBuilder setFizGender(Gender fizGender) {
-	person.setFizGender(fizGender);
-	return this;
+        person.setFizGender(fizGender);
+        return this;
     }
 
     @Override
     public ProfileBuilder setActivity(Activity activity) {
-	person.setActivity(activity);
-	return this;
+        person.setActivity(activity);
+        return this;
     }
 
     @Override
     public ProfileBuilder setName(String name) {
-	person.setName(name);
-	return this;
+        person.setName(name);
+        return this;
     }
 
     @Override
-    public ProfileBuilder setWeight(double weight) {
-	person.setWeight(weight);
-	return this;
+    public ProfileBuilder setWeightInKg(double weight) {
+        person.setWeightInKg(weight);
+        return this;
     }
 
     @Override
-    public ProfileBuilder setHeight(double height) {
-	person.setHeight(height);
-	return this;
+    public ProfileBuilder setHeightInCm(int height) {
+        person.setHeightInCm(height);
+        return this;
     }
 
     @Override
-    public ProfileBuilder setAge(int age) {
-	person.setAge(age);
-	return this;
+    public ProfileBuilder setAgeInYears(int age) {
+        person.setAgeInYears(age);
+        return this;
     }
 }

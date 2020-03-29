@@ -1,5 +1,5 @@
 package bmrCalculator;
 
-public enum Gender {
+enum Gender {
 	    MALE, FEMALE;
 	}
